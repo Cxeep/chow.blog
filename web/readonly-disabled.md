@@ -13,4 +13,5 @@ disabled在submit时，根本不会被提交上去。
 
     
 q: why `formData.append('version', _versions.value);`
+
 a:`<select name="version" id="version" class="form-input" ***disabled***></select>`
