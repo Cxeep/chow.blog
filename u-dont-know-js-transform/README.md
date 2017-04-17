@@ -1,2 +1,2 @@
-[preface](./preface.md)  
-[types & grammar](./types-grammer/README.md)
+ 1. [preface](./preface.md) 
+ 2. [types & grammar](./types-grammer/README.md)
