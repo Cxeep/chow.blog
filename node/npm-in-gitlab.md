@@ -13,6 +13,8 @@ but，有个注意点：**git+ssh://**。这个前缀说明这是需要验证ssl
 
 so，只需要改一下：  
 ![将Visibility Level改成public][1]
-[1]: ../public/npm-in-git-lab1.png
+
+
+  [1]: ../public/npm-in-git-lab1.png
   
  然后把前缀**git+ssh://**改成**git+http://**。
