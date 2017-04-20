@@ -8,7 +8,7 @@
 此君，说node添加了这么一个参数：--inspect，用了这个参数，node会生成一条链接，把这个链接放在chrome浏览器，就能愉快的调试node程序了。   
 比如：  
 
-    > node --inspect apps.js
+    > node --inspect xxx.js
     Debugger listening on port 9229.
     Warning: This is an experimental feature and could change at any time.
     To start debugging, open the following URL in Chrome:chrome-devtools://devtools/bundled/inspector.html?experiments=true&v8only=true&ws=127.0.0.1:9229/13a08d6e-6b2d-4f78-bce5-575c4894985a
