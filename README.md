@@ -6,3 +6,4 @@
  6. [process.env.PWD与process.env.cwd()的区别](./node/dif-pwd-cwd.md)
  7. [node scripts](./node/node-scrips.md)
  8. [node vm](./node/node-vm.md)
+ 8. [node --inspect](./node/node-inspect.md)
