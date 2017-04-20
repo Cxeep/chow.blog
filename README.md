@@ -5,3 +5,4 @@
  5. [npm包如果是在gitlab上](./node/npm-in-gitlab.md)
  6. [process.env.PWD与process.env.cwd()的区别](./node/dif-pwd-cwd.md)
  7. [node scripts](./node/node-scrips.md)
+ 8. [node vm](./node/node-vm.md)
