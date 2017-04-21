@@ -31,6 +31,24 @@ eg:
     { e: 100 }
     [Finished in 0.1s]
     
-简直Amazing.
+简直Amazing.   
 
+**So**
+-
+
+module.js封装文件的核心代码，简化的话如下：  
+
+    var vm = require('vm');
+    var m = {};
+    var compileWrapper = vm.runInThisContext('(function (m) { m.e = 3 });');
+    compileWrapper.call(this, m);
+    
+    console.log(m.e)
+    
+结果：
+
+    3
+    [Finished in 0.2s]
+    
+利用vm的特性，可以做很多事情，比如沙盒，比如单元测试等等。
 
