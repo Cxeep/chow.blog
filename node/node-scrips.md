@@ -8,8 +8,8 @@ package.json的scripts下有个命令:
     
 突然间觉得这样子好多余，于是：
 
-    "start" : "node -e 'require(\\'xx/core\\')()'"
+    "start" : "node --use-strict --eval \"require('gl/core')()\""
     
-至于为什么`\\'`，那是因为json格式比较严格，试过`\\"`和`"`都不行。  
+这边有个很深的坑，如果写`node --use-strict --eval 'require(\"gl/core\")()'`,咋看这些没有错，而且npm start也不会报错。but，压根就不会执行。  
 
-因为这种不方便的特性，我决定踩踩YAML和TOML的坑。
+So，记得你的代码块用`""`包裹起来。
