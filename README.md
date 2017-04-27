@@ -8,3 +8,4 @@
  8. [node vm](./node/node-vm.md)
  9. [node --inspect](./node/node-inspect.md)
  10. [sbulime build system](./other/sublime-build-system.md)
+ 11. [node http.request](./node/http-request.md)
