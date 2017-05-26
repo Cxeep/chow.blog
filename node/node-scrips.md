@@ -12,10 +12,10 @@ package.json的scripts下有个命令:
     
 **注意**
 -
- 1. 这边有个很深的坑，如果写`node --use-strict --eval
-        'require(\"gl/core\")()'`,咋看这些没有错，而且npm start也不会报错。but，压根就不会执行。So，记得你的代码块用`""`包裹起来。
+ 1. 这边有个很深的坑，如果外面的双引号改成单引号，`node --use-strict --eval
+        'require(\"gl/core\")()'`,咋看这些没有错，而且npm start也不会报错。but，压根就不会执行。So，记得用`""`。
 
- 2. 还有个很有意思的地方，path这种NativeModule在scripts里居然不需要require，就能直接调。。。
+ 2. 还有个很有意思的地方，path这种Native_Module居然不需要require，就能直接调。。。
 
 
 **不可思议**
@@ -25,3 +25,5 @@ package.json的scripts下有个命令:
 
 
   [1]: ../public/buzhisuocuo.jpg
+  
+再联系到之前不需要require('path')，就能调用。我只能联系到‘沙盒’两个字。我要看下源代码压压惊。。。
