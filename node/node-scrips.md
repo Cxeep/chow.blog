@@ -34,7 +34,7 @@ package.json的scripts下有个命令:
  - node::Start
     -  Environment env(isolate_data, context)
     -  LoadEnvironment(&env)
-        - Local<String> script_name = FIXED_ONE_BYTE_STRING(env->isolate(),"bootstrap_node.js");
+        - Local<String> script_name = FIXED_ONE_BYTE_STRING(env->isolate(), "bootstrap_node.js");
         - ExecuteString(env, MainSource(env), script_name)
             - v8::Script::Compile
             - script.ToLocalChecked()->Run()
