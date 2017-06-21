@@ -34,13 +34,14 @@ package.json的scripts下有个命令:
  - node::Start
     -  Environment env(isolate_data, context)
     -  LoadEnvironment(&env)
-        - Local<String> script_name = FIXED_ONE_BYTE_STRING(env->isolate(), "bootstrap_node.js");
+        - Local<String> script_name = FIXED_ONE_BYTE_STRING(env->isolate(),"bootstrap_node.js");
         - ExecuteString(env, MainSource(env), script_name)
             - v8::Script::Compile
             - script.ToLocalChecked()->Run()
 
 说明node.js的启动都是从bootstrap_node.js开始的。而在bootstrap_node.js文件里：
-startup: 初始化process -> 初始化timeout -> 初始化console -> 根据命令参数执行js代码。
+
+    startup: 初始化process -> 初始化timeout -> 初始化console -> 根据命令参数执行js代码。
 
 所以，整个顺序就是：
 
