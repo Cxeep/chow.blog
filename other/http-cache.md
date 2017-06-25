@@ -26,7 +26,7 @@
         * return new resource.
         * Client cache resource.
 
-    eg:  
+    Note:  
     Pragma means client not use client-cache.  
     Cache-Control is more high-level than Expires and Pragma.  
     Etag is a hash-string made of resource's information, like size, name, last-modified.
