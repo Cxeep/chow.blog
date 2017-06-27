@@ -38,4 +38,3 @@ os环境下有点特殊：
         "working_dir": "${project_path:${folder}}",
         "selector": "*.js"
     }
-不指明`/user/local/bin/node`，os似乎不认识node这个命令，有待研究下。
