@@ -4,28 +4,28 @@
 
 插件是由社区创建的程序或应用程序，扩展了Figma编辑器的功能。插件在文件中运行，执行一个或多个用户操作，并允许用户自定义其体验或创建更高效的工作流程。
 
-插件由Web技术驱动。您需要了解这些技术才能开发插件。您将使用**JavaScript**编写插件，并使用**HTML**构建任何UI。[了解所需知识 →](./prerequisites.md)
+插件由Web技术驱动。您需要了解这些技术才能开发插件。您将使用**JavaScript**编写插件，并使用**HTML**构建任何UI。[了解所需知识 →](https://www.figma.com/plugin-docs/prerequisites/)
 
-插件通过专用的**Plugin API**与Figma的编辑器进行交互。它们还可以利用外部**Web APIs**。您可以构建在用户调用后立即运行的插件，也可以构建需要用户通过用户界面（UI）输入信息的插件。[了解插件如何运行 →](./how-plugins-run.md)
+插件通过专用的**Plugin API**与Figma的编辑器进行交互。它们还可以利用外部**Web APIs**。您可以构建在用户调用后立即运行的插件，也可以构建需要用户通过用户界面（UI）输入信息的插件。[了解插件如何运行 →](https://www.figma.com/plugin-docs/how-plugins-run/)
 
-[API 参考](./api-reference.md)和本附带文档提供了构建插件所需的信息。要提问、提供反馈或与其他插件开发人员联系，
-[请加入我们的社区驱动的Discord服务器 →](./join-community.md)
+[API 参考](https://www.figma.com/plugin-docs/api/api-reference/)和本附带文档提供了构建插件所需的信息。要提问、提供反馈或与其他插件开发人员联系，
+[请加入我们的社区驱动的Discord服务器 →](https://discord.gg/xzQhe2Vcvx)
 
-我们的设置指南将引导您完成设置环境并运行示例插件的过程。[开始使用插件API →](./quickstart.md)
+我们的设置指南将引导您完成设置环境并运行示例插件的过程。[开始使用插件API →](https://www.figma.com/plugin-docs/plugin-quickstart-guide/)
 
 ### 插件API访问
 
-插件API支持读写功能，允许开发人员**查看**、**创建**和**修改**文件内容。您可以通过[figma](./global-figma.md)全局对象访问大多数插件API。
+插件API支持读写功能，允许开发人员**查看**、**创建**和**修改**文件内容。您可以通过[figma](https://www.figma.com/plugin-docs/api/figma/)全局对象访问大多数插件API。
 
 插件首先公开文件内容。这包括层面板中存在的任何内容以及属性面板中与这些层相关联的任何属性。插件可以查看和修改这些层（或节点）的各个方面，如颜色、位置、层次结构、文本等。
 
 **插件API不允许您访问其运行的当前文件之外的任何内容。插件无法访问：**
 
-来自任何团队或组织库的样式和组件。插件API只能访问当前文件中存在的样式、组件和实例，或通过像 [importComponentByKeyAsync()](./importcomponentbykeyasync.md) 这样的函数导入到文件中的样式、组件和实例。
-通过URL访问的外部字体或Web字体。插件只能访问编辑器中可访问的字体，其中包括Figma的默认字体、[共享组织字体](./shared-organization-fonts.md)或存储在[您计算机本地的字体](./fonts-stored-locally-on-your-computer.md)。您需要加载您想要在插件中使用的任何字体。这不适用于您想要在插件UI中使用的字体。
-其他文件元数据，如文件的团队或位置、权限或与该文件相关联的任何注释。这包括该文件的版本历史记录。您可以通过Figma的REST API获取对文件这些方面的读访问权限。
+来自任何团队或组织库的样式和组件。插件API只能访问当前文件中存在的样式、组件和实例，或通过像 [importComponentByKeyAsync()](https://www.figma.com/plugin-docs/api/figma/#importcomponentbykeyasync) 这样的函数导入到文件中的样式、组件和实例。
+通过URL访问的外部字体或Web字体。插件只能访问编辑器中可访问的字体，其中包括Figma的默认字体、[共享组织字体](https://help.figma.com/hc/en-us/articles/360039956774)或存储在[您计算机本地的字体](https://help.figma.com/hc/en-us/articles/360039956894)。您需要[加载您想要在插件中使用的任何字体](https://www.figma.com/plugin-docs/api/properties/figma-loadfontasync/)。这不适用于您想要在插件UI中使用的字体。
+其他文件元数据，如文件的团队或位置、权限或与该文件相关联的任何注释。这包括该文件的版本历史记录。您可以通过Figma的[REST API](https://www.figma.com/developers/api#intro)获取对文件这些方面的读访问权限。
 
-`在开发模式下，插件只能读取当前所在文件的页面内容，并且只能写入某些元数据，如[插件数据（pluginData）](./setPluginData.md)和[重新启动数据（relaunchData）](./setRelaunchData.md)。详细了解请参阅我们的[《在开发模式下工作》](./working-in-dev-mode.md)指南。  `
+`在开发模式下，插件只能读取当前所在文件的页面内容，并且只能写入某些元数据，如[插件数据（pluginData）](https://www.figma.com/plugin-docs/api/properties/nodes-setplugindata/)和[重新启动数据（relaunchData）](https://www.figma.com/plugin-docs/api/properties/nodes-setrelaunchdata/)。详细了解请参阅我们的[《在开发模式下工作》](https://www.figma.com/plugin-docs/working-in-dev-mode/)指南。  `
 
 ### 文档结构
 
@@ -39,13 +39,13 @@
 
 节点具有与之关联的多个属性。其中一些是**全局属性**，存在于每个节点上，而其他属性则特定于节点的类型。
 
-您可以为特定的编辑器类型创建插件，也可以为多个编辑器创建插件，或者构建在不同的编辑器中执行不同操作的插件。虽然某些节点类型只能在特定的文件或编辑器类型中创建，但通常情况下，无论编辑器类型如何，您都可以读取和修改大多数节点，除非插件正在运行于开发模式。详细了解请参阅[《在开发模式下工作》](./working-in-dev-mode.md)指南。
+您可以为特定的编辑器类型创建插件，也可以为多个编辑器创建插件，或者构建在不同的编辑器中执行不同操作的插件。虽然某些节点类型只能在特定的文件或编辑器类型中创建，但通常情况下，无论编辑器类型如何，您都可以读取和修改大多数节点，除非插件正在运行于开发模式。详细了解请参阅[《在开发模式下工作》](https://www.figma.com/plugin-docs/working-in-dev-mode/)指南。
 
 ### 基于浏览器
 
 Figma主要是基于浏览器的软件，这意味着它可以在所有全功能桌面操作系统（如MacOS、Windows、Linux等）以及Chrome OS上运行。
 
-与Figma一样，插件也是由Web技术驱动的。插件API的一部分在一个`<iframe>`中运行，这意味着您还可以访问浏览器API。这包括进行网络请求、打开本地文件以及使用`<canvas>`、WebGL和WebAssembly等功能。[了解插件如何运行 →](./how-plugins-run.md)翻译：
+与Figma一样，插件也是由Web技术驱动的。插件API的一部分在一个`<iframe>`中运行，这意味着您还可以访问浏览器API。这包括进行网络请求、打开本地文件以及使用`<canvas>`、WebGL和WebAssembly等功能。[了解插件如何运行 →](https://www.figma.com/plugin-docs/how-plugins-run/)翻译：
 
 ### 用户操作
 
@@ -70,7 +70,7 @@ Figma主要是基于浏览器的软件，这意味着它可以在所有全功能
 
 ### Relaunch plugins
 
-在构建插件时，您可以选择在Figma的用户界面中创建按钮，以便用户可以重新启动您的插件。这使得多次运行插件更加容易，并允许协作者从同一文件中重新启动插件。您可以使用[setRelaunchData()](./setRelaunchData.md)函数来实现这一点。
+在构建插件时，您可以选择在Figma的用户界面中创建按钮，以便用户可以重新启动您的插件。这使得多次运行插件更加容易，并允许协作者从同一文件中重新启动插件。您可以使用[setRelaunchData()](https://www.figma.com/plugin-docs/api/properties/nodes-setrelaunchdata/)函数来实现这一点。
 
 ```
 
@@ -89,7 +89,7 @@ manifest.json
 
 在FigJam中，页面或文档节点上不提供重新启动按钮。
 
-可以将多个重新启动按钮添加到同一个节点中。如果将来自同一个插件的多个重新启动按钮添加到同一个节点中，它们将被合并到一个按钮中，并带有子菜单。按钮的顺序由清单的relaunchButtons数组中元素的顺序确定。[在插件清单文档中了解更多信息→](./plugin_manifest.md)
+可以将多个重新启动按钮添加到同一个节点中。如果将来自同一个插件的多个重新启动按钮添加到同一个节点中，它们将被合并到一个按钮中，并带有子菜单。按钮的顺序由清单的relaunchButtons数组中元素的顺序确定。[在插件清单文档中了解更多信息→](https://www.figma.com/plugin-docs/manifest/)
 
 # 插件管理
 
