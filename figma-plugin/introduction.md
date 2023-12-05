@@ -4,7 +4,7 @@
 
 插件是由社区创建的程序或应用程序，扩展了Figma编辑器的功能。插件在文件中运行，执行一个或多个用户操作，并允许用户自定义其体验或创建更高效的工作流程。
 
-插件由Web技术驱动。您需要了解这些技术才能开发插件。您将使用**JavaScript**编写插件，并使用**HTML**构建任何UI。[了解所需知识 →](https://www.figma.com/plugin-docs/prerequisites/)
+插件由Web技术驱动。您需要了解这些技术才能开发插件。您将使用**JavaScript**编写插件，并使用**HTML**构建任何UI。[了解所需知识 →](./prerequisites.md)
 
 插件通过专用的**Plugin API**与Figma的编辑器进行交互。它们还可以利用外部**Web APIs**。您可以构建在用户调用后立即运行的插件，也可以构建需要用户通过用户界面（UI）输入信息的插件。[了解插件如何运行 →](https://www.figma.com/plugin-docs/how-plugins-run/)
 
