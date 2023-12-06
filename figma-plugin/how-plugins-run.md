@@ -39,4 +39,4 @@
 Setting editor type](https://www.figma.com/plugin-docs/setting-editor-type/)
 
 [Next
-Accessing the Document](https://www.figma.com/plugin-docs/accessing-document/)
+Accessing the Document](./accessing-document.md)
