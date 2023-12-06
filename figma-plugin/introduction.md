@@ -6,7 +6,7 @@
 
 插件由Web技术驱动。您需要了解这些技术才能开发插件。您将使用**JavaScript**编写插件，并使用**HTML**构建任何UI。[了解所需知识 →](./prerequisites.md)
 
-插件通过专用的**Plugin API**与Figma的编辑器进行交互。它们还可以利用外部**Web APIs**。您可以构建在用户调用后立即运行的插件，也可以构建需要用户通过用户界面（UI）输入信息的插件。[了解插件如何运行 →](https://www.figma.com/plugin-docs/how-plugins-run/)
+插件通过专用的**Plugin API**与Figma的编辑器进行交互。它们还可以利用外部**Web APIs**。您可以构建在用户调用后立即运行的插件，也可以构建需要用户通过用户界面（UI）输入信息的插件。[了解插件如何运行 →](./how-plugins-run.md)
 
 [API 参考](./api-ref.md)和本附带文档提供了构建插件所需的信息。要提问、提供反馈或与其他插件开发人员联系，
 [请加入我们的社区驱动的Discord服务器 →](https://discord.gg/xzQhe2Vcvx)
