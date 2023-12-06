@@ -8,7 +8,7 @@ API参考包括浏览插件API所需的资源和材料。您可以使用侧边�
 
 您可以通过[figma全局对象](https://www.figma.com/plugin-docs/api/figma/)及其子对象访问大多数插件API。您将找到允许您查看、创建和更新文件内容的属性和函数。
 
-在插件API中还有一些全局变量可用：[html__](https://www.figma.com/plugin-docs/api/global-objects/#html)和[__uiFiles](https://www.figma.com/plugin-docs/api/global-objects/#uifiles)。您可以使用这些变量来访问您的UI文件的内容。
+在插件API中还有一些全局变量可用：[__html__](https://www.figma.com/plugin-docs/api/global-objects/#html)和[__uiFiles__](https://www.figma.com/plugin-docs/api/global-objects/#uifiles)。您可以使用这些变量来访问您的UI文件的内容。
 
 [浏览全局对象和变量 →](https://www.figma.com/plugin-docs/api/global-objects/)
 
