@@ -59,7 +59,7 @@ figma.skipInvisibleInstanceChildren = true
 按条件查找所有节点
 // Finds all component and component set nodes
 const nodes = node.findAllWithCriteria({
-types: ['COMPONENT', 'COMPONENT_SET']
+    types: ['COMPONENT', 'COMPONENT_SET']
 })
 ```
 
@@ -79,12 +79,12 @@ types: ['COMPONENT', 'COMPONENT_SET']
 内置遍历助手
 // Finds the first text node with more than 100 characters
 const node = node.findOne(node => {
-return node.type === "TEXT" && node.characters.length > 100
+    return node.type === "TEXT" && node.characters.length > 100
 })
 
 // Finds all empty frame nodes
 const nodes = node.findAll(node => {
-return node.type === "FRAME" && node.children.length === 0
+    return node.type === "FRAME" && node.children.length === 0
 })
 ```
 
